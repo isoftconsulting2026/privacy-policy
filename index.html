@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Politique de Confidentialité – AfDB AM 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --blue:        #07487B;
+      --blue-dark:   #053660;
+      --blue-light:  #0A5A98;
+      --yellow:      #EEBF1C;
+      --yellow-soft: #F5D060;
+      --gray-dark:   #1D1D1B;
+      --gray-mid:    #757575;
+      --gray-light:  #D6D6D6;
+      --bg:          #F5F5F5;
+      --white:       #FFFFFF;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      background: var(--bg);
+      color: var(--gray-dark);
+      line-height: 1.8;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-light) 100%);
+      color: var(--white);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(238,191,28,0.08) 0%, transparent 70%);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--yellow);
+    }
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(238,191,28,0.4);
+      border-radius: 40px;
+      padding: 8px 20px;
+      margin-bottom: 24px;
+    }
+    .logo-badge .dot { width:8px; height:8px; background:var(--yellow); border-radius:50%; }
+    .logo-badge span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    header h1 span { color: var(--yellow); }
+    header p.subtitle {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.05em;
+      position: relative;
+    }
+    .yellow-bar { width:48px; height:3px; background:var(--yellow); margin:22px auto 0; border-radius:2px; }
+
+    /* MAIN */
+    main { max-width: 800px; margin: 0 auto; padding: 52px 24px 80px; }
+
+    /* META */
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--gray-light);
+      overflow: hidden;
+      margin-bottom: 48px;
+      box-shadow: 0 2px 8px rgba(7,72,123,0.07);
+    }
+    .meta-item {
+      flex: 1; min-width: 150px;
+      padding: 16px 20px;
+      border-right: 1px solid var(--gray-light);
+    }
+    .meta-item:last-child { border-right: none; }
+    .meta-item label {
+      display: block;
+      color: var(--gray-mid);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+    .meta-item strong {
+      color: var(--blue);
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+    }
+
+    /* INTRO */
+    .intro-card {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+      border-radius: 10px;
+      padding: 28px 32px;
+      color: var(--white);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .intro-card::after {
+      content: '';
+      position: absolute;
+      right: -20px; top: -20px;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: rgba(238,191,28,0.12);
+    }
+    .intro-card p { font-size:0.93rem; color:rgba(255,255,255,0.88); position:relative; }
+    .intro-card p strong { color: var(--yellow-soft); }
+
+    /* SECTION CARDS */
+    section { margin-bottom: 40px; }
+    .section-card {
+      background: var(--white);
+      border-radius: 10px;
+      border: 1px solid var(--gray-light);
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(7,72,123,0.05);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--bg);
+      background: var(--bg);
+    }
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: var(--blue);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+    .section-body { padding: 22px 24px; }
+    .section-body p { font-size:0.93rem; margin-bottom:12px; }
+    .section-body p:last-child { margin-bottom:0; }
+
+    /* FEATURES */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .feature-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg);
+      border: 1px solid var(--gray-light);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--blue);
+    }
+    .feature-chip .bullet { width:8px; height:8px; background:var(--yellow); border-radius:50%; flex-shrink:0; }
+
+    /* LIST */
+    .item-list { list-style:none; margin:12px 0 0; }
+    .item-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--bg);
+      font-size: 0.92rem;
+    }
+    .item-list li:last-child { border-bottom:none; padding-bottom:0; }
+    .item-list li .arrow {
+      color: var(--yellow);
+      font-size: 1.1rem;
+      line-height: 1.5;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    /* PERM TAG */
+    .perm-tag {
+      display: inline-block;
+      background: rgba(7,72,123,0.08);
+      color: var(--blue);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin: 2px 2px 6px 0;
+    }
+
+    /* CONTACT */
+    .contact-card {
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      border-radius: 10px;
+      padding: 30px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .contact-card .contact-text p { color:rgba(255,255,255,0.65); font-size:0.85rem; margin-bottom:4px; }
+    .contact-card .contact-text strong { color:var(--white); font-family:'Montserrat',sans-serif; font-size:1rem; }
+    .contact-btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--blue-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 11px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .contact-btn:hover { background: var(--yellow-soft); }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.78rem;
+      color: var(--gray-mid);
+      border-top: 1px solid var(--gray-light);
+    }
+    footer span { color: var(--blue); font-weight: 500; }
+
+    @media (max-width: 520px) {
+      header { padding: 40px 16px 36px; }
+      main { padding: 32px 14px 60px; }
+      .meta-item { border-right:none; border-bottom:1px solid var(--gray-light); }
+      .meta-item:last-child { border-bottom:none; }
+      .section-body { padding: 18px 16px; }
+      .contact-card { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-badge">
+    <div class="dot"></div>
+    <span>Application Officielle</span>
+    <div class="dot"></div>
+  </div>
+  <h1>Politique de <span>Confidentialité</span></h1>
+  <p class="subtitle">AfDB AM 2026 — Assemblée Annuelle de la Banque Africaine de Développement</p>
+  <div class="yellow-bar"></div>
+</header>
+
+<main>
+
+  <div class="meta">
+    <div class="meta-item"><label>Date d'effet</label><strong>1er Janvier 2025</strong></div>
+    <div class="meta-item"><label>Mise à jour</label><strong>Mars 2026</strong></div>
+    <div class="meta-item"><label>Package</label><strong>com.afdb.am2026</strong></div>
+    <div class="meta-item"><label>Plateforme</label><strong>Android</strong></div>
+  </div>
+
+  <div class="intro-card">
+    <p>
+      <strong>AfDB AM 2026</strong> est l'application officielle pour suivre les activités et événements
+      de la Banque Africaine de Développement en 2026. Cette politique décrit comment nous collectons,
+      utilisons et protégeons vos données personnelles lors de l'utilisation de l'application.
+    </p>
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <h2>Fonctionnalités de l'Application</h2>
+      </div>
+      <div class="section-body">
+        <p>AfDB AM 2026 offre les fonctionnalités suivantes aux participants de l'Assemblée Annuelle :</p>
+        <div class="features-grid">
+          <div class="feature-chip"><div class="bullet"></div>Actualités</div>
+          <div class="feature-chip"><div class="bullet"></div>Agenda</div>
+          <div class="feature-chip"><div class="bullet"></div>En direct (Live)</div>
+          <div class="feature-chip"><div class="bullet"></div>Panelistes</div>
+          <div class="feature-chip"><div class="bullet"></div>Lieux &amp; Hôtels</div>
+          <div class="feature-chip"><div class="bullet"></div>Médias</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <h2>Données Collectées</h2>
+      </div>
+      <div class="section-body">
+        <p>Pour fonctionner correctement, l'application utilise les autorisations suivantes :</p>
+        <ul class="item-list">
+          <li>
+            <span class="arrow">›</span>
+            <div>
+              <span class="perm-tag">RECORD_AUDIO</span><span class="perm-tag">MODIFY_AUDIO_SETTINGS</span><br/>
+              Accès au microphone pour la recherche vocale et les commandes vocales dans l'interface.
+            </div>
+          </li>
+          <li>
+            <span class="arrow">›</span>
+            <div>
+              <span class="perm-tag">ACCESS_FINE_LOCATION</span><span class="perm-tag">ACCESS_COARSE_LOCATION</span><br/>
+              Données de localisation pour guider l'utilisateur vers les hôtels et lieux de l'événement.
+            </div>
+          </li>
+          <li>
+            <span class="arrow">›</span>
+            <div>
+              <span class="perm-tag">INTERNET</span><span class="perm-tag">ACCESS_NETWORK_STATE</span><br/>
+              Accès à Internet pour charger les actualités, l'agenda, les sessions en direct et les médias.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <h2>Utilisation du Microphone</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          L'application demande l'accès au microphone <strong>uniquement</strong> lorsque vous utilisez
+          la recherche vocale ou les commandes vocales. L'audio est traité localement ou transmis
+          uniquement pour la reconnaissance vocale, puis immédiatement supprimé.
+        </p>
+        <p>
+          Aucun enregistrement audio n'est conservé sur nos serveurs. Vous pouvez révoquer cette
+          autorisation à tout moment depuis les paramètres de votre appareil Android.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <h2>Utilisation de la Localisation</h2>
+      </div>
+      <div class="section-body">
+        <p>L'accès à votre position géographique est utilisé pour :</p>
+        <ul class="item-list">
+          <li><span class="arrow">›</span>Afficher les hôtels et lieux d'événements à proximité</li>
+          <li><span class="arrow">›</span>Calculer les itinéraires et distances vers les sites de l'événement</li>
+          <li><span class="arrow">›</span>Personnaliser les recommandations selon votre position</li>
+        </ul>
+        <p style="margin-top:14px;">
+          Vos données de localisation ne sont pas partagées avec des tiers et ne sont
+          pas stockées de manière permanente sur nos serveurs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <h2>Partage des Données</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          Nous ne vendons, ne louons et ne partageons <strong>pas</strong> vos données personnelles
+          avec des tiers à des fins commerciales ou publicitaires.
+        </p>
+        <p>Un partage peut intervenir uniquement dans ces cas :</p>
+        <ul class="item-list">
+          <li><span class="arrow">›</span>Avec votre consentement explicite</li>
+          <li><span class="arrow">›</span>Pour se conformer à une obligation légale</li>
+          <li><span class="arrow">›</span>Avec des prestataires techniques strictement nécessaires au fonctionnement de l'application</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <h2>Sécurité des Données</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger
+          vos données contre tout accès non autorisé, perte ou divulgation.
+          Toutes les communications entre l'application et nos serveurs sont chiffrées via <strong>HTTPS</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section>
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <h2>Vos Droits</h2>
+      </div>
+      <div class="section-body">
+        <ul class="item-list">
+          <li><span class="arrow">›</span>Droit d'accès à vos données personnelles</li>
+          <li><span class="arrow">›</span>Droit de rectification ou de suppression</li>
+          <li><span class="arrow">›</span>Droit de retirer votre consentement à tout moment</li>
+          <li><span class="arrow">›</span>Droit de révoquer les autorisations (microphone, localisation) depuis les paramètres Android</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <h2>Modifications de la Politique</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment.
+          Toute modification sera publiée sur cette page avec une nouvelle date de mise à jour.
+          Nous vous encourageons à consulter cette page régulièrement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 Contact -->
+  <section>
+    <div class="contact-card">
+      <div class="contact-text">
+        <p>Pour toute question concernant cette politique de confidentialité</p>
+        <strong>AfDB AM 2026 — Équipe de développement</strong>
+      </div>
+      <a href="mailto:contact@afdb-am2026.org" class="contact-btn">Nous contacter</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 <span>AfDB AM 2026</span> · Banque Africaine de Développement · Assemblée Annuelle · <span>com.afdb.am2026</span>
+</footer>
+
+</body>
+</html>
